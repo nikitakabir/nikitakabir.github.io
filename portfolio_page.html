@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Set the style of the table -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body{
+      color: inherit;
+      font-family: 'Open Sans', sans-serif;
+    }
+    table, th, td{
+      border: 2px solid #01426a;
+      border-collapse: collapse;
+      padding: 15px;
+      text-align: center;
+      vertical-align: middle;
+      color: #01426a
+    }
+    th  {
+      background-color: #ece81a
+    }
+    tr:hover {background-color: #ece81a}
+
+    * {box-sizing:border-box}
+    body {font-family: Verdana,sans-serif;margin:0}
+    .mySlides {display:none}
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor:pointer;
+      height: 13px;
+      width: 13px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+
+
+
+  </style>
+</head>
+
+
+
+
+<body style="background-color:pink;">
+<font size="5">
+
+<script>
+window.alert("Welcome to Nikita's Portfolio");
+</script>
+
+  <h1> <b> Nikita Kabir </b> </h1>
+  <br>
+  <br>
+  <p> I am Nikita Kabir. I'm currently a senior in Arlington High School, Arlington, Texas. I'm from Bangladesh and moved to the United States in 2015.   </p>
+  <br>
+  <a href="https://sann-sipmsft.github.io/"> Click here to see my Girls who Code final project</h2>
+  <br>
+  <!-- <img src = "images/nikita.jpg"
+ <style= "width:190px;height:300px;"> -->
+  <img onmouseover="bigImg(this)" onmouseout= "normalImg(this)" src="images/nikita.jpg" width="128" height="128">
+  <script>
+  function bigImg(x) {
+      x.style.height = "256px";
+      x.style.width = "256px";
+  }
+
+  function normalImg(x) {
+      x.style.height = "128px";
+      x.style.width = "128px";
+  }
+  </script>
+<br>
+<br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/GWCMicrosoft.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="womentech.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="gwcmicro.jpeg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+  <h2> <b> Fun facts </b> </h2>
+  <p2> I know almost 5 languages! I am fluent in English and Bangla. I know how to speak Hindi, little bit Spanish. I know to read Arabic but don't know the meanings.</p2>
+  <h2> <b> Likes and Dislikes </b> </h2>
+  <p3> I like everything!! I like learning new things, reading, watching shows, cooking, seeing new places, eating, sleeping and what not! </p3>
+
+  <h2> <b> My Recent Projects </b> </h2>
+  <p4> Last week, my partner Rebekah and I made a side-scrolling game "Super Bob!". Here is a screenshot of the fun game: </p4>
+  <br>
+  <br>
+
+  <p5> <img src = "images/super bob.jpg"
+  style= "width:300px;height:200px;"> </p5>
+
+  <h2> <b> Contact Me! </b> </h2>
+  <p6> E-mail: nikitakabir123@gmail.com
+  <br>
+  <a href= "https://www.facebook.com/nikita.saiyara"> Facebook </a>
+  <br>
+  <a href= "https://www.instagram.com/nikitakabir/?hl=en"> Instagram </a>
+  <h2> Reflection </h2>
+  <p7> I made my font bigger and keep it as simple as possible.
+    <br>
+    I liked how my other peers used different colors and fonts to make their page look pretty. Some of the pages were really organized and I loved reading all the contents.
+    <br>
+    Overall, I am proud that I am learning html because it allows me to do really cool stuffs. Specially, I liked learning how to add links and images to my webpage. </p7>
+</font>
+<!-- Table starts here-->
+<div style ="overflow-x:auto;">
+  <table style="width:90%; margin:1em auto">
+
+    <!-- Define the first row of the table -->
+    <tr>
+      <th>Core4 Concept</th>
+      <th>Technical Definition</th>
+      <th>Real-Life Analogy</th>
+      <th>Python Example</th>
+      <th>Scratch Example</th>
+    </tr>
+
+    <!-- Fill in the row for Variables -->
+    <tr>
+    <td><b>Variables</b></td>
+      <td>Variables are used to store information to be referenced and manipulated in a computer program.</td>
+      <td>Variable could be exemplified as a bucket because you can store water in the bucket, change the water and take the water somewhere else.  </td>
+      <td>  </td>
+      <td>  </td>
+    </tr>
+
+    <!-- Fill in the row for Loops -->
+    <tr>
+      <td><b>Loops</b></td>
+      <td>In computer programming, a loop is a sequence of instructions that is continually repeated until a certain condition is reached.   </td>
+      <td>If I turn on a water tap, the water will keep coming until I turn it off.  </td>
+      <td>  </td>
+      <td>  </td>
+    </tr>
+
+    <!-- Fill in the row for Conditionals -->
+    <tr>
+      <td><b>Conditionals</b></td>
+      <td>Referring to an action that takes place only if a specific condition is met. Most programming languages use the word if for conditional expressions. </td>
+      <td> If I don't eat breakfast, I will be hungry all day.  </td>
+      <td>  </td>
+      <td>  </td>
+    </tr>
+
+    <!-- Fill in the row for Functions -->
+    <tr>
+      <td><b>Functions</b></td>
+      <td>In computer science, function composition (not to be confused with object composition) is an act or mechanism to combine simple functions to build more complicated ones.  </td>
+      <td>A function could be an 'eat' function where everytime I eat, I take the food,chew and digest it. So, every time I repeat the same thing.</td>
+      <td>  </td>
+      <td>  </td>
+    </tr>
+
+  </table>
+</div>
+
+
+</body>
+</html>
